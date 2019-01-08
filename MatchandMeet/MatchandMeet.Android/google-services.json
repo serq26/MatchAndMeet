@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "612011807928",
+    "firebase_url": "https://bim493project.firebaseio.com",
+    "project_id": "bim493project",
+    "storage_bucket": "bim493project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612011807928:android:c975122305aafc5f",
+        "android_client_info": {
+          "package_name": "com.companyname.Bim493_Project_Design"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612011807928-bho605b6hfvgl3c353gptf2786jo6omj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmDcNh9MwHtKX0mMM6QkWT6_PjeYEoEtg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

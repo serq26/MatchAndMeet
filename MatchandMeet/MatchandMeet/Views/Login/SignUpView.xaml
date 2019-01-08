@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MatchandMeet.Views.Login.SignUpView">
+	<AbsoluteLayout VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand" BackgroundColor="#323542">
+
+
+		<ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+			<Grid Padding="20, 30, 20, 20" RowSpacing="20">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="20" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+
+				<Label Text="SIGN UP" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" TextColor="Coral">
+					<Label.FontFamily>
+						<OnPlatform x:TypeArguments="x:String">
+							<OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>
+							<OnPlatform.Android></OnPlatform.Android>
+							<OnPlatform.WinPhone></OnPlatform.WinPhone>
+						</OnPlatform>
+					</Label.FontFamily>
+				</Label>
+
+
+
+				<Grid Grid.Row="2" HorizontalOptions="Fill" Padding="5">
+
+					<Entry Placeholder="Email Address" Margin="0,50,0,0" PlaceholderColor="Coral" BackgroundColor="Transparent" HorizontalOptions="Fill" TextColor="Orange"   Text="{Binding Username}"/>
+				</Grid>
+				<BoxView HeightRequest="1" Grid.Row="2" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="End"/>
+
+				<Grid Grid.Row="3" HorizontalOptions="Fill" Padding="5">
+
+					<Entry Placeholder="Password"  PlaceholderColor="Coral"  IsPassword="true" BackgroundColor="Transparent" HorizontalOptions="Fill" TextColor="Orange"   Text="{Binding Password}"/>
+				</Grid>
+				<BoxView HeightRequest="1" Grid.Row="3" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="End"/>
+
+				<StackLayout Grid.Row="4" Spacing="12" HorizontalOptions="Fill">
+					<Button Text="Sign Up" Command="{Binding SignUpCommand}" Margin="0,100,0,0"  BackgroundColor="Orange" HorizontalOptions="Fill" TextColor="White"/>
+
+
+					<StackLayout Spacing="5">
+						<Label Text="Or click here if you have an account"  HorizontalOptions="Center" TextColor="Coral" FontSize="15" Margin="0,20,0,0" />
+						<BoxView HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="End"/>
+						<StackLayout.GestureRecognizers>
+							<TapGestureRecognizer
+                                    Command="{Binding LoginCommand}"
+                                    NumberOfTapsRequired="1" />
+						</StackLayout.GestureRecognizers>
+					</StackLayout >
+				</StackLayout>
+
+
+			</Grid>
+		</ScrollView>
+	</AbsoluteLayout>
+</ContentPage>

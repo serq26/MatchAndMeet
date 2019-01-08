@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="MatchandMeet.Profile">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="20">
+            <image:CircleImage x:Name="Image" WidthRequest="100" HeightRequest="100" ></image:CircleImage>
+            <Image x:Name="Add_Image" HeightRequest="100" WidthRequest="100" Source="https://img.icons8.com/ios/1600/add.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped">
+                        
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label x:Name="Add_Img_Text" Text="Add Image" TextColor="Coral" HorizontalOptions="Center"></Label>
+          
+
+            <StackLayout Orientation="Vertical" Padding="50" >
+           
+                <Entry Text="" Placeholder="Name" x:Name="EntryName"></Entry>
+                <Entry Text="" Placeholder="Age" x:Name="EntryAge"></Entry>
+                <Picker x:Name="picker" Title="Select a city">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Ankara</x:String>
+                            <x:String>Antalya</x:String>
+                            <x:String>Eskişehir</x:String>
+                            <x:String>İstanbul</x:String>
+                            <x:String>İzmir</x:String>
+                            <x:String>Muğla</x:String>
+                            <x:String>Trabzon</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button Margin="0,30,0,0" Clicked="Save_Clicked" VerticalOptions="End" Text="SAVE" TextColor="White" BackgroundColor="Orange"></Button>
+
+            </StackLayout>
+        </StackLayout>
+       
+        
+        
+       
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MatchandMeet.MasterDetailPage.MatchUp"
+             xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             Title="MatchUp">
+    <StackLayout Padding="10">
+       
+
+        <StackLayout Orientation="Vertical" HeightRequest="200">
+            
+            <Label Text="350m" TextColor="Gray" FontAttributes="Italic" FontSize="20" HorizontalOptions="Center" Margin="10" ></Label>
+
+            <StackLayout>
+                
+                <image:CircleImage Source="https://www.lifewire.com/thmb/8PXQh300rj9dothW0w-5ipA4EsY=/400x0/filters:no_upscale():max_bytes(150000):strip_icc()/Maplocation_-5a492a4e482c52003601ea25.jpg" HeightRequest="100" WidthRequest="200" Margin="40"></image:CircleImage>
+            
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+            <Button Text="Get GPS location" HorizontalOptions="Center" WidthRequest="350"  Clicked="OnButtonClicked" TextColor="Chocolate" FontSize="20" Margin="0,20,0,0"/>
+            <Label Text="Boylam"></Label>
+            <Label x:Name="LogitudeLabel" FontSize="20"/>
+            <Label Text="Enlem"></Label>
+            <Label x:Name="LatitudeLabel" FontSize="20"/>
+            <Label Text="Mesafe"></Label>
+            <Label x:Name="DistanceLabel" FontSize="20"/>
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="20">
+            <Label Text="Serhat"  FontSize="24" FontAttributes="Bold" TextColor="Black"></Label>
+            <Label Text=","  FontSize="24" FontAttributes="Bold" TextColor="Black"></Label>
+            <Label Text="24" FontSize="24"  TextColor="Black"></Label>
+        </StackLayout>
+
+        <!--<StackLayout Orientation="Horizontal" HeightRequest="165" BackgroundColor="#ededed">
+
+            <Image   HorizontalOptions="Start" HeightRequest="50" WidthRequest="50" Source="https://cdn3.iconfinder.com/data/icons/faticons/32/picture-01-512.png"></Image>
+            <Image HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50" Source="https://static.thenounproject.com/png/212328-200.png"></Image>
+            <Image HorizontalOptions="End" HeightRequest="50" WidthRequest="50" Source="https://img.icons8.com/metro/1600/stack-of-photos.png"></Image>
+
+        </StackLayout>-->
+    </StackLayout>
+</ContentPage>
