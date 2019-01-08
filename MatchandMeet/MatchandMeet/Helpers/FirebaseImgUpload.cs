@@ -43,5 +43,10 @@ namespace MatchandMeet.Helpers
 
             return true;
         }
+
+        public async Task<User> LoadUserRequest()
+        {
+            return await client.Child("users/" + _firebaseAuthService.GetUserId()).OnceSingleAsync<User>();
+        }
     }
 }

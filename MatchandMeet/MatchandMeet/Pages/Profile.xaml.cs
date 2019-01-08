@@ -16,17 +16,33 @@ namespace MatchandMeet
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Profile : ContentPage 
-	{
-     
+	{     
         Stream imgStr;
+        User loadedUser;
 
 		public Profile ()
 		{
 			InitializeComponent ();
-                       
-		}
 
-       
+            LoadUserInfo();    
+        }
+
+        async void LoadUserInfo()
+        {
+            var fire = new FirebaseImgUpload();
+            loadedUser = await fire.LoadUserRequest();
+
+            if (loadedUser != null)
+            {
+
+
+                EntryName.Text = loadedUser.Name;
+                EntryAge.Text = loadedUser.Age;
+                picker.SelectedItem = loadedUser.City;
+                Image.Source = loadedUser.ImageUrl;
+
+            }
+        }       
 
        async private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
