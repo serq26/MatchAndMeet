@@ -95,5 +95,7 @@ namespace MatchAndMeet.Droid.Services.FirebaseAuth
             var user = Firebase.Auth.FirebaseAuth.GetInstance(MainActivity.app).CurrentUser;
             return user.Uid;
         }
+
+      
     }
 }

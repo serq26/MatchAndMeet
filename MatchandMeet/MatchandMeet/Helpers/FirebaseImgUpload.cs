@@ -9,6 +9,7 @@ using Firebase.Database.Query;
 using Firebase.Database;
 using MatchandMeet.Services.FirebaseAuth;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace MatchandMeet.Helpers
 {
@@ -47,6 +48,23 @@ namespace MatchandMeet.Helpers
         public async Task<User> LoadUserRequest()
         {
             return await client.Child("users/" + _firebaseAuthService.GetUserId()).OnceSingleAsync<User>();
+        }
+
+        public async Task<List<User>> LoadAllUserRequest()
+        {
+            var list = (await client
+                .Child("users/")
+                .OnceAsync<User>())
+                .Select(item =>
+                            new User
+                            {
+                                Name = item.Object.Name,
+                                Age = item.Object.Age,
+                                ImageUrl = item.Object.ImageUrl
+
+                            }).ToList();
+
+            return list;
         }
     }
 }
