@@ -24,6 +24,15 @@
            
                 <Entry Text="" Placeholder="Name" x:Name="EntryName"></Entry>
                 <Entry Text="" Placeholder="Age" x:Name="EntryAge"></Entry>
+                <Picker x:Name="pickerGender" Title="Select a gender">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Kadın</x:String>
+                            <x:String>Erkek</x:String>
+                           
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
                 <Picker x:Name="picker" Title="Select a city">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">

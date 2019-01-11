@@ -39,6 +39,7 @@ namespace MatchandMeet
                 EntryName.Text = loadedUser.Name;
                 EntryAge.Text = loadedUser.Age;
                 picker.SelectedItem = loadedUser.City;
+                pickerGender.SelectedItem = loadedUser.Gender;
                 Image.Source = loadedUser.ImageUrl;
 
             }
@@ -69,8 +70,9 @@ namespace MatchandMeet
             var fire = new FirebaseImgUpload();
             var txt = EntryName.Text;
             var age = EntryAge.Text;
+            var gender = pickerGender.SelectedItem.ToString();
             var city = picker.SelectedItem.ToString();
-            await fire.SaveUserRequest(imgStr, new User { Name = txt , Age = age, City = city });
+            await fire.SaveUserRequest(imgStr, new User { Name = txt , Age = age, City = city, Gender = gender });
 
             var answer = await DisplayAlert("Match&Meet", "You have been registered!", "OK","Cancel");
             if(answer)

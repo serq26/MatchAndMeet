@@ -10,5 +10,6 @@ namespace MatchandMeet
         public string Age { get; set; } = "";
         public string City { get; set; } = "";
         public string ImageUrl { get; set; } = "";
+        public string Gender { get; set; } = "";
     }
 }
