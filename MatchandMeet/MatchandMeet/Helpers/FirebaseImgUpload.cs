@@ -13,7 +13,7 @@ using System.Linq;
 
 namespace MatchandMeet.Helpers
 {
-    public class FirebaseImgUpload 
+    public class FirebaseImgUpload
     {
         FirebaseClient client;
         FirebaseStorage storage;
@@ -31,7 +31,7 @@ namespace MatchandMeet.Helpers
         public async Task<bool> SaveUserRequest(Stream imgStream, User req)
         {
 
-          //var postData = await client.Child(_firebaseAuthService.GetUserId()).PostAsync<User>(req);
+            //var postData = await client.Child(_firebaseAuthService.GetUserId()).PostAsync<User>(req);
 
             var imgUrl = await storage.Child("Image")
                  .Child("MaM")
@@ -52,19 +52,27 @@ namespace MatchandMeet.Helpers
 
         public async Task<List<User>> LoadAllUserRequest()
         {
-            var list = (await client
-                .Child("users/")
-                .OnceAsync<User>())
-                .Select(item =>
-                            new User
-                            {
-                                Name = item.Object.Name,
-                                Age = item.Object.Age,
-                                ImageUrl = item.Object.ImageUrl
+            try
+            {
+                var list = (await client
+                                .Child("users/")
+                                .OnceAsync<User>())
+                                .Where(item => item.Key != _firebaseAuthService.GetUserId())
+                                .Select(item =>
+                                            new User
+                                            {
+                                                Name = item.Object.Name,
+                                                Age = item.Object.Age,
+                                                ImageUrl = item.Object.ImageUrl
+                                            })
+                                .ToList();
 
-                            }).ToList();
-
-            return list;
+                return list;
+            }
+            catch (Exception)
+            {
+                return null;
+            }            
         }
     }
 }

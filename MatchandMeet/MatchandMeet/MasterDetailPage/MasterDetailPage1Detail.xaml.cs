@@ -22,8 +22,7 @@ namespace MatchandMeet
         {
             InitializeComponent();
            
-            LoadAllUserInfo();
-           
+            LoadAllUserInfo();           
         }
 
         async void LoadAllUserInfo()

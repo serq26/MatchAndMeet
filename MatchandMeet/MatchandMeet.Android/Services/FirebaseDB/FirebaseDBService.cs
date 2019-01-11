@@ -38,8 +38,7 @@ namespace MatchAndMeet.Droid.Services.FirebaseDB
         {
             var userId = authService.GetUserId();
             databaseReference = database.GetReference("messages/" + userId);
-            databaseReference.AddValueEventListener(new ValueEventListener());
-            
+            databaseReference.AddValueEventListener(new ValueEventListener());            
         }
 
         public string GetMessageKey()
@@ -65,7 +64,7 @@ namespace MatchAndMeet.Droid.Services.FirebaseDB
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 return false;
