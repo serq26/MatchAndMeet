@@ -54,10 +54,12 @@ namespace MatchandMeet.Helpers
         {
             try
             {
+                User myUser = await LoadUserRequest();
+
                 var list = (await client
                                 .Child("users/")
                                 .OnceAsync<User>())
-                                .Where(item => item.Key != _firebaseAuthService.GetUserId())
+                                .Where(item => item.Key != _firebaseAuthService.GetUserId() && item.Object.Gender != myUser.Gender)
                                 .Select(item =>
                                             new User
                                             {

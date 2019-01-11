@@ -10,6 +10,7 @@ using MatchAndMeet.Droid.Services.FirebaseAuth;
 using MatchandMeet.Droid;
 using MatchandMeet.Services.FirebaseDB;
 using MatchAndMeet.Droid.Services.FirebaseDB;
+using MatchandMeet;
 
 [assembly: Dependency(typeof(FirebaseAuthService))]
 namespace MatchAndMeet.Droid.Services.FirebaseAuth
@@ -95,6 +96,12 @@ namespace MatchAndMeet.Droid.Services.FirebaseAuth
             var user = Firebase.Auth.FirebaseAuth.GetInstance(MainActivity.app).CurrentUser;
             return user.Uid;
         }
+
+        //public User GetUserInfo()
+        //{
+        //    return Firebase.Auth.FirebaseAuth.GetInstance(MainActivity.app).CurrentUser.;
+           
+        //}
 
       
     }

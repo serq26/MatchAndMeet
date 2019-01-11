@@ -32,20 +32,27 @@ namespace MatchandMeet
 
             if (loadedUsers != null)
             {
-                UserName.Text = loadedUsers[0].Name +","+ " " + loadedUsers[0].Age;
-                UserImage.Source = loadedUsers[0].ImageUrl;
+                try
+                {
+                    UserName.Text = loadedUsers[0].Name + "," + " " + loadedUsers[0].Age;
+                    UserImage.Source = loadedUsers[0].ImageUrl;
 
-                UserName2.Text = loadedUsers[1].Name + "," + " " + loadedUsers[1].Age;
-                UserImage2.Source = loadedUsers[1].ImageUrl;
+                    UserName2.Text = loadedUsers[1].Name + "," + " " + loadedUsers[1].Age;
+                    UserImage2.Source = loadedUsers[1].ImageUrl;
 
-                UserName3.Text = loadedUsers[2].Name + "," + " " + loadedUsers[2].Age;
-                UserImage3.Source = loadedUsers[2].ImageUrl;
+                    UserName3.Text = loadedUsers[2].Name + "," + " " + loadedUsers[2].Age;
+                    UserImage3.Source = loadedUsers[2].ImageUrl;
 
-                UserName4.Text = loadedUsers[3].Name + "," + " " + loadedUsers[3].Age;
-                UserImage4.Source = loadedUsers[3].ImageUrl;
+                    UserName4.Text = loadedUsers[3].Name + "," + " " + loadedUsers[3].Age;
+                    UserImage4.Source = loadedUsers[3].ImageUrl;
 
-                UserName5.Text = loadedUsers[4].Name + "," + " " + loadedUsers[4].Age;
-                UserImage5.Source = loadedUsers[4].ImageUrl;
+                    UserName5.Text = loadedUsers[4].Name + "," + " " + loadedUsers[4].Age;
+                    UserImage5.Source = loadedUsers[4].ImageUrl;
+                }
+                catch (Exception)
+                {
+
+                }
             }
         }
        
