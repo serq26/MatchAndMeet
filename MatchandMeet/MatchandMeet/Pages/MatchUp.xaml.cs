@@ -18,11 +18,21 @@ namespace MatchandMeet.MasterDetailPage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MatchUp : ContentPage
     {
-        public MatchUp()
+        User selectedUser;
+
+        public MatchUp(User user)
         {
             InitializeComponent();
             GetLocation();
+            selectedUser = user;
+
+            userName.Text = selectedUser.Name;
+            userAge.Text = selectedUser.Age;
+            userImage.Source = selectedUser.ImageUrl;
+           
         }
+
+        
         public async void GetLocation()
         {
             var locator = CrossGeolocator.Current;
@@ -40,6 +50,13 @@ namespace MatchandMeet.MasterDetailPage
             double miles = Location.CalculateDistance(boston, MyLocation, DistanceUnits.Miles);
 
             DistanceLabel.Text = miles.ToString();
+            
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            ImageArrow.IsVisible = true;
+            acceptbutton.IsVisible = false;
         }
 
         //public async void OnButtonClicked(object sender, EventArgs e)

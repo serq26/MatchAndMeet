@@ -13,15 +13,18 @@
 
             <StackLayout Orientation="Vertical">
                 
-                <image:CircleImage Source="https://www.lifewire.com/thmb/8PXQh300rj9dothW0w-5ipA4EsY=/400x0/filters:no_upscale():max_bytes(150000):strip_icc()/Maplocation_-5a492a4e482c52003601ea25.jpg" HeightRequest="200" WidthRequest="200" Margin="40"></image:CircleImage>
+                <image:CircleImage x:Name="userImage" HeightRequest="200" WidthRequest="200" Margin="40"></image:CircleImage>
 
-                <Image HorizontalOptions="Center" Source="arrow.png" HeightRequest="100" x:Name="ImageArrow"/>
+                <Image IsVisible="False" HorizontalOptions="Center" Source="arrow.png" HeightRequest="100" x:Name="ImageArrow"/>
+              
             </StackLayout>
-           
+            
             <StackLayout Orientation="Horizontal" Margin="20" VerticalOptions="End">
-                <Label Text="Serhat"  FontSize="28" FontAttributes="Bold" TextColor="Black"></Label>
+                <Label x:Name="userName"  FontSize="28" FontAttributes="Bold" TextColor="Black"></Label>
                 <Label Text=","  FontSize="28" FontAttributes="Bold" TextColor="Black"></Label>
-                <Label Text="24" FontSize="28"  TextColor="Black"></Label>
+                <Label x:Name="userAge"  FontSize="28"  TextColor="Black"></Label>
+
+                
             </StackLayout>
 
             <StackLayout Orientation="Vertical">
@@ -36,8 +39,8 @@
 
         </StackLayout>
 
-       
 
+        <Button x:Name="acceptbutton" Text="Accept" FontSize="20" TextColor="Blue" Clicked="Button_Clicked" ></Button>
         <!--<Button Text="Get GPS location" Clicked="OnButtonClicked" FontSize="20" />-->
         
      

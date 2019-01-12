@@ -7,5 +7,6 @@ namespace MatchandMeet
     public class NotificationsModel
     {
         public string notice { get; set; }
+        public User user {get; set;}
     }
 }
