@@ -29,7 +29,7 @@ namespace MatchandMeet
 
         async void LoadUserInfo()
         {
-            var fire = new FirebaseImgUpload();
+            var fire = new FirebaseHelper();
             loadedUser = await fire.LoadUserRequest();
 
             if (loadedUser != null)
@@ -53,7 +53,6 @@ namespace MatchandMeet
 
             if (imgData != null)
             {
-
                 Image.Source = ImageSource.FromStream(() => imgStr);
                 imgStr = imgData.GetStream();
             }
@@ -67,7 +66,7 @@ namespace MatchandMeet
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            var fire = new FirebaseImgUpload();
+            var fire = new FirebaseHelper();
             var txt = EntryName.Text;
             var age = EntryAge.Text;
             var gender = pickerGender.SelectedItem.ToString();
@@ -82,8 +81,6 @@ namespace MatchandMeet
             }
            
         }
-
-
 
         void OnPickerSelectedIndexChanged(object sender, EventArgs e)
         {

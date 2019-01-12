@@ -5,6 +5,8 @@ using MatchandMeet.Services.FirebaseDB;
 using MatchandMeet.Droid;
 using MatchAndMeet.Droid.Services.FirebaseAuth;
 using MatchAndMeet.Droid.Services.FirebaseDB;
+using System.Threading.Tasks;
+using MatchandMeet.ViewModels;
 
 [assembly: Dependency(typeof(FirebaseDBService))]
 namespace MatchAndMeet.Droid.Services.FirebaseDB
@@ -68,11 +70,24 @@ namespace MatchAndMeet.Droid.Services.FirebaseDB
             {
 
                 return false;
-            }
-          
-
+            }  
         }
 
-        
+        public async Task<string> CreateLike()
+        {
+            try
+            {
+                Connect();                
+                Guid id = Guid.NewGuid();
+                databaseReference = database.GetReference("likes/" + id);
+                await databaseReference.SetValueAsync("");
+
+                return id.ToString();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using MatchandMeet.Helpers;
 using MatchandMeet.MasterDetailPage;
+using MatchandMeet.Services.FirebaseDB;
+using MatchandMeet.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,18 +18,21 @@ namespace MatchandMeet
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterDetailPage1Detail : ContentPage
     {
-       
+        IFirebaseDBService _firebaseDBService;
         List<User> loadedUsers;
+
         public MasterDetailPage1Detail()
         {
             InitializeComponent();
            
-            LoadAllUserInfo();           
+            LoadAllUserInfo();
+
+            _firebaseDBService = DependencyService.Get<IFirebaseDBService>();
         }
 
         async void LoadAllUserInfo()
         {
-            var fire = new FirebaseImgUpload();
+            var fire = new FirebaseHelper();
             loadedUsers = await fire.LoadAllUserRequest();
 
             if (loadedUsers != null)
@@ -66,8 +71,21 @@ namespace MatchandMeet
 
         async private void ImageButton_Clicked(object sender, EventArgs e)
         {
-            Frame1.IsVisible = false;
-            await Navigation.PushAsync(new MatchUp());
+            //Frame1.IsVisible = false;
+            //await Navigation.PushAsync(new MatchUp());
+
+            string id = await _firebaseDBService.CreateLike();
+
+            if (id != null)
+            {
+                var helper = new FirebaseHelper();
+                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[0].UserID }))
+                {
+                    //Frame1.IsVisible = false;
+                    //await Navigation.PushAsync(new MatchUp());
+                }
+            }
+
         }
         private void ImageButton1_Clicked(object sender, EventArgs e)
         {

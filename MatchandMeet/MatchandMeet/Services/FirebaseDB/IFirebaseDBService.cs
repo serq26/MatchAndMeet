@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MatchandMeet.ViewModels;
+using System;
+using System.Threading.Tasks;
+
 namespace MatchandMeet.Services.FirebaseDB
 {
     public interface IFirebaseDBService
@@ -8,5 +11,6 @@ namespace MatchandMeet.Services.FirebaseDB
         void SetMessage(String message);
         String GetMessageKey();
         bool CreateUser();
+        Task<string> CreateLike();
     }
 }
