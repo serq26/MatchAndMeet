@@ -2,6 +2,7 @@
 using MatchandMeet.MasterDetailPage;
 using MatchandMeet.Services.FirebaseDB;
 using MatchandMeet.ViewModels;
+using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,10 +25,23 @@ namespace MatchandMeet
         public MasterDetailPage1Detail()
         {
             InitializeComponent();
-           
+
+            GetLocation();
             LoadAllUserInfo();
 
             _firebaseDBService = DependencyService.Get<IFirebaseDBService>();
+        }
+
+        async void GetLocation()
+        {
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 50;
+
+            var position = await locator.GetPositionAsync(timeout: TimeSpan.FromSeconds(10000));
+            string location = position.Longitude.ToString() + " " + position.Latitude.ToString();
+
+            var fire = new FirebaseHelper();
+            await fire.SaveUserLocation(location);
         }
 
         async void LoadAllUserInfo()

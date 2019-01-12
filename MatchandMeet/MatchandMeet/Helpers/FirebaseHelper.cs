@@ -22,10 +22,10 @@ namespace MatchandMeet.Helpers
 
         public FirebaseHelper()
         {
-            //client = new FirebaseClient("https://bim493project.firebaseio.com/");
-            //storage = new FirebaseStorage("bim493project.appspot.com");
-            client = new FirebaseClient("https://matchandmeet-f2943.firebaseio.com");
-            storage = new FirebaseStorage("matchandmeet-f2943.appspot.com");
+            client = new FirebaseClient("https://bim493project.firebaseio.com/");
+            storage = new FirebaseStorage("bim493project.appspot.com");
+            //client = new FirebaseClient("https://matchandmeet-f2943.firebaseio.com");
+            //storage = new FirebaseStorage("matchandmeet-f2943.appspot.com");
 
             authService = DependencyService.Get<IFirebaseAuthService>();
         }
@@ -49,6 +49,16 @@ namespace MatchandMeet.Helpers
             req.UserID = authService.GetUserId();
 
             var updateData = client.Child("users/" + authService.GetUserId()).PutAsync<User>(req);
+
+            return true;
+        }
+
+        public async Task<bool> SaveUserLocation(string location)
+        {
+            User myUser = await LoadUserRequest();
+            myUser.Location = location;
+
+            var updateData = client.Child("users/" + authService.GetUserId()).PutAsync<User>(myUser);
 
             return true;
         }
