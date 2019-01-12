@@ -45,7 +45,7 @@ namespace MatchandMeet.ViewModels.Login
             {
                 if (_firebaseDBService.CreateUser())
                 {
-                    await NavigationService.NavigateToAsync<MasterDetailViewModel>();
+                    await NavigationService.NavigateToAsync<ProfileViewModel>();
                 }
                 else
                 {

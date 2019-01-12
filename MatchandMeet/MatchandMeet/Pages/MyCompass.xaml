@@ -7,7 +7,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
+        <StackLayout Orientation="Vertical">
+        <Label Text="Coordinate"></Label>
+        <Label x:Name="Long"></Label>
+        <Label x:Name="Lati"></Label>
+        </StackLayout>
         <Image HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
                
@@ -23,6 +27,7 @@
            x:Name="LabelInfo"
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
+
 
     </Grid>
 </ContentPage>

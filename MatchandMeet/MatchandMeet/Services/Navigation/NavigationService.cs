@@ -104,7 +104,7 @@ namespace MatchandMeet.Services.Navigation
             _mappings.Add(typeof(MasterDetailViewModel), typeof(MasterDetailPage1));
             _mappings.Add(typeof(LoginViewModel), typeof(LoginView));
             _mappings.Add(typeof(SignUpViewModel), typeof(SignUpView));
-          
+            _mappings.Add(typeof(ProfileViewModel), typeof(Profile));
 
         }
 
