@@ -12,6 +12,7 @@ using Acr.UserDialogs;
 using Android.Gms.Auth.Api.SignIn;
 using Xamarin.Forms;
 using MatchAndMeet.Droid.Services.FirebaseAuth;
+using Plugin.Permissions;
 
 namespace MatchandMeet.Droid
 {
@@ -65,5 +66,10 @@ namespace MatchandMeet.Droid
             Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        //public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        //{
+        //   PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        //}
     }
 }

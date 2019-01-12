@@ -10,6 +10,8 @@ using Xamarin.Essentials;
 
 
 using Plugin.Geolocator;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 
 namespace MatchandMeet.MasterDetailPage
 {
@@ -19,30 +21,10 @@ namespace MatchandMeet.MasterDetailPage
         public MatchUp()
         {
             InitializeComponent();
-           // GetLocation();
+            GetLocation();
         }
-        //public async void GetLocation()
-        //{
-        //    var locator = CrossGeolocator.Current;
-        //    locator.DesiredAccuracy = 50;
-
-        //    var position = await locator.GetPositionAsync(timeout: TimeSpan.FromSeconds(10000));
-
-        //    LogitudeLabel.Text = position.Longitude.ToString();
-        //    LatitudeLabel.Text = position.Latitude.ToString();
-
-        //    Location MyLocation = new Location(position.Longitude, position.Latitude);
-        //    Location boston = new Location(42.358056, -71.063611);
-        //    Location sanFrancisco = new Location(37.783333, -122.416667);
-
-        //    double miles = Location.CalculateDistance(boston, MyLocation, DistanceUnits.Miles);
-          
-        //    DistanceLabel.Text = miles.ToString();
-        //}
-
-        public async void OnButtonClicked(object sender, EventArgs e)
+        public async void GetLocation()
         {
-
             var locator = CrossGeolocator.Current;
             locator.DesiredAccuracy = 50;
 
@@ -59,6 +41,39 @@ namespace MatchandMeet.MasterDetailPage
 
             DistanceLabel.Text = miles.ToString();
         }
+
+        //public async void OnButtonClicked(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Location);
+        //        if (status != PermissionStatus.Granted)
+        //        {
+        //            if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Location))
+        //            {
+        //                await DisplayAlert("Need location", "Gunna need that location", "OK");
+        //            }
+
+        //            var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Location });
+        //            status = results[Permission.Location];
+        //        }
+
+        //        if (status == PermissionStatus.Granted)
+        //        {
+        //            var results = await CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromMilliseconds(10000));
+        //            DistanceLabel.Text = "Lat: " + results.Latitude + " Long: " + results.Longitude;
+        //        }
+        //        else if (status != PermissionStatus.Unknown)
+        //        {
+        //            await DisplayAlert("Location Denied", "Can not continue, try again.", "OK");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        DistanceLabel.Text = "Error: " + ex;
+        //    }
+        //}
 
     }
 }
