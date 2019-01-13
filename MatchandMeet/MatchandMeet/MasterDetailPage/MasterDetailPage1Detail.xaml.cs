@@ -228,8 +228,48 @@ namespace MatchandMeet
                     Frame10.IsVisible = false;
                 }
             }
-        }      
+        }
+        private void Cancel_Clicked(object sender, EventArgs e)
+        {
+            Frame1.IsVisible = false;
+        }
 
+        private void Cancel1_Clicked(object sender, EventArgs e)
+        {
+            Frame2.IsVisible = false;
+        }
+        private void Cancel2_Clicked(object sender, EventArgs e)
+        {
+            Frame3.IsVisible = false;
+        }
+        private void Cancel3_Clicked(object sender, EventArgs e)
+        {
+            Frame4.IsVisible = false;
+        }
+        private void Cancel4_Clicked(object sender, EventArgs e)
+        {
+            Frame5.IsVisible = false;
+        }
+        private void Cancel5_Clicked(object sender, EventArgs e)
+        {
+            Frame6.IsVisible = false;
+        }
+        private void Cancel6_Clicked(object sender, EventArgs e)
+        {
+            Frame7.IsVisible = false;
+        }
+        private void Cancel7_Clicked(object sender, EventArgs e)
+        {
+            Frame8.IsVisible = false;
+        }
+        private void Cancel8_Clicked(object sender, EventArgs e)
+        {
+            Frame9.IsVisible = false;
+        }
+        private void Cancel9_Clicked(object sender, EventArgs e)
+        {
+            Frame10.IsVisible = false;
+        }
 
     }
 }

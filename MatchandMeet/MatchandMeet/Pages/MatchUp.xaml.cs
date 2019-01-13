@@ -20,35 +20,59 @@ namespace MatchandMeet.MasterDetailPage
     public partial class MatchUp : ContentPage
     {
         User selectedUser;
-
+        double DEG_PER_RAD = (180.0 / Math.PI);
         public MatchUp(User user)
         {
             InitializeComponent();
             GetLocation();
             selectedUser = user;
 
-            userName.Text = selectedUser.Name;
-            userAge.Text = selectedUser.Age;
+            userName.Text = selectedUser.Name + ","+ selectedUser.Age;
+          
             userImage.Source = selectedUser.ImageUrl;           
         }
-        
+
         public async void GetLocation()
         {
             var locator = CrossGeolocator.Current;
             locator.DesiredAccuracy = 50;
 
+      
+
             var position = await locator.GetPositionAsync(timeout: TimeSpan.FromSeconds(10000));
-
-            LogitudeLabel.Text = position.Longitude.ToString();
-            LatitudeLabel.Text = position.Latitude.ToString();
-
             Location MyLocation = new Location(position.Longitude, position.Latitude);
-            Location boston = new Location(42.358056, -71.063611);
-            Location sanFrancisco = new Location(37.783333, -122.416667);
 
-            double miles = Location.CalculateDistance(boston, MyLocation, DistanceUnits.Miles);
 
-            DistanceLabel.Text = miles.ToString();            
+            string[] locs = selectedUser.Location.Split(' ');
+            Location selectedUserLocation = new Location(double.Parse(locs[0]), double.Parse(locs[1])); 
+
+            double miles = Location.CalculateDistance(selectedUserLocation, MyLocation, DistanceUnits.Miles);
+
+
+            distance.Text =((int)miles).ToString() + "m";
+
+            GetDirection(MyLocation);
+
+
+
+        }
+
+        public double GetDirection(Location location)
+        {
+            Location sanFrancisco = new Location(39, 099912 - 94.581213);
+            // Location boston = new Location(38.627089, -90.200203);
+            Location boston = new Location(41.015137, 28.979530); // istanbul coordinates
+            //Location location = sanFrancisco;
+
+
+            double Lon = boston.Longitude - location.Longitude;
+            double y = Math.Sin(Lon) * Math.Cos(boston.Latitude);
+            double x = Math.Cos(location.Latitude) * Math.Sin(boston.Latitude) - Math.Sin(location.Latitude) * Math.Cos(boston.Latitude) * Math.Cos(Lon);
+            double angle = DEG_PER_RAD * Math.Atan2(y, x);
+
+            ImageArrow.Rotation = angle;
+
+            return angle;
         }
 
         private void Button_Clicked(object sender, EventArgs e)

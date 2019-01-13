@@ -38,8 +38,8 @@
 
     <ScrollView Orientation="Both">
         <FlexLayout>
-            <Frame x:Name="Frame1" IsVisible="True" WidthRequest="350"
-                   HeightRequest="600">
+            <Frame x:Name="Frame1" IsVisible="True" WidthRequest="250"
+                   HeightRequest="500">
 
                 <FlexLayout Direction="Column">
                     <Label Text="" FontSize="30" x:Name="UserName"
@@ -51,7 +51,35 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                                                            
+
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
@@ -95,7 +123,35 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                    
+
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel1_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
@@ -136,7 +192,35 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                    
+
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel2_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
@@ -177,7 +261,35 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                    
+
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel3_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
@@ -218,7 +330,35 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                   
+
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel4_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
@@ -260,7 +400,35 @@
                            Aspect="AspectFill"/>
 					<Label FlexLayout.Grow="1" />
 
-					<ImageButton BackgroundColor="Transparent"
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel5_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
+                    <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"
@@ -301,7 +469,35 @@
                            Aspect="AspectFill"/>
 					<Label FlexLayout.Grow="1" />
 
-					<ImageButton BackgroundColor="Transparent"
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel6_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
+                    <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"
@@ -342,7 +538,35 @@
                            Aspect="AspectFill"/>
 					<Label FlexLayout.Grow="1" />
 
-					<ImageButton BackgroundColor="Transparent"
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel7_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
+                    <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"
@@ -383,7 +607,35 @@
                            Aspect="AspectFill"/>
 					<Label FlexLayout.Grow="1" />
 
-					<ImageButton BackgroundColor="Transparent"
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel8_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
+                    <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"
@@ -424,7 +676,35 @@
                            Aspect="AspectFill"/>
 					<Label FlexLayout.Grow="1" />
 
-					<ImageButton BackgroundColor="Transparent"
+
+                    <ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    Margin="0,0,0,-63"
+                    FlexLayout.AlignSelf="Start"
+                    Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                    Clicked="Cancel9_Clicked"
+                    Source="cancel.png">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+
+                    <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"

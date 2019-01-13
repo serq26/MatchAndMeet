@@ -9,7 +9,7 @@
 
         <StackLayout Orientation="Vertical" HeightRequest="200">
             
-            <Label Text="350m" TextColor="Gray" FontAttributes="Italic" FontSize="20" HorizontalOptions="Center" Margin="10" ></Label>
+            <Label x:Name="distance" TextColor="Gray" FontAttributes="Italic" FontSize="20" HorizontalOptions="Center" Margin="10" ></Label>
 
             <StackLayout Orientation="Vertical">
                 
@@ -21,26 +21,15 @@
             
             <StackLayout Orientation="Horizontal" Margin="20" VerticalOptions="End">
                 <Label x:Name="userName"  FontSize="28" FontAttributes="Bold" TextColor="Black"></Label>
-                <Label Text=","  FontSize="28" FontAttributes="Bold" TextColor="Black"></Label>
-                <Label x:Name="userAge"  FontSize="28"  TextColor="Black"></Label>
-
                 
             </StackLayout>
 
-            <StackLayout Orientation="Vertical">
-
-                <Label Text="Boylam"></Label>
-                <Label x:Name="LogitudeLabel" FontSize="20"/>
-                <Label Text="Enlem"></Label>
-                <Label x:Name="LatitudeLabel" FontSize="20"/>
-                <Label Text="Mesafe"></Label>
-                <Label x:Name="DistanceLabel" FontSize="20"/>
-            </StackLayout>
+            <Button x:Name="acceptbutton" Text="Accept" BorderRadius="20" BorderColor="Black" FontSize="20" BackgroundColor="Green" TextColor="White" FontAttributes="Bold" Clicked="Button_Clicked" Margin="0,100,0,0" ></Button>
 
         </StackLayout>
 
-		<Button x:Name="acceptbutton" Text="Accept" FontSize="20" TextColor="Blue" Clicked="Button_Clicked" ></Button>
-        <!--<Button Text="Get GPS location" Clicked="OnButtonClicked" FontSize="20" />-->
+		
+       
      
     </StackLayout>
 </ContentPage>
