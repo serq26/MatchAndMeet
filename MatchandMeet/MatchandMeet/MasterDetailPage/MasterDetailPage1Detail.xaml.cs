@@ -97,7 +97,7 @@ namespace MatchandMeet
             if (id != null)
             {
                 var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[0].UserID }))
+                if (await helper.SaveLike(new Like { likeID = id, receiverID = loadedUsers[0].UserID }))
                 {
                     Frame1.IsVisible = false;                    
                 }
@@ -111,7 +111,7 @@ namespace MatchandMeet
             if (id != null)
             {
                 var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[1].UserID }))
+                if (await helper.SaveLike(new Like { likeID = id, receiverID = loadedUsers[1].UserID }))
                 {
                     Frame2.IsVisible = false;
                 }
@@ -125,7 +125,7 @@ namespace MatchandMeet
             if (id != null)
             {
                 var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[2].UserID }))
+                if (await helper.SaveLike(new Like { likeID = id, receiverID = loadedUsers[2].UserID }))
                 {
                     Frame3.IsVisible = false;
                 }
@@ -139,7 +139,7 @@ namespace MatchandMeet
             if (id != null)
             {
                 var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[3].UserID }))
+                if (await helper.SaveLike(new Like { likeID = id, receiverID = loadedUsers[3].UserID }))
                 {
                     Frame4.IsVisible = false;
                 }
@@ -153,7 +153,7 @@ namespace MatchandMeet
             if (id != null)
             {
                 var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[4].UserID }))
+                if (await helper.SaveLike(new Like { likeID = id, receiverID = loadedUsers[4].UserID }))
                 {
                     Frame5.IsVisible = false;
                 }
@@ -167,7 +167,7 @@ namespace MatchandMeet
             if (id != null)
             {
                 var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[5].UserID }))
+                if (await helper.SaveLike(new Like { likeID = id, receiverID = loadedUsers[5].UserID }))
                 {
                     Frame6.IsVisible = false;
                 }

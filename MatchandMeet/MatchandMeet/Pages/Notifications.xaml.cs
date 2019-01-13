@@ -42,9 +42,9 @@ namespace MatchandMeet
                     listItem.Add(new NotificationsModel
                     {
                         notice = myUser.Name + " liked you!",
-                        user = myUser
+                        userAndLike = new UserAndLike { user = myUser, likeState = false }
                     });
-                } 
+                }
             }
 
             if (acceptedLikes != null)
@@ -56,21 +56,20 @@ namespace MatchandMeet
                     listItem.Add(new NotificationsModel
                     {
                         notice = myUser.Name + " accepted your like!",
-                        user = myUser
+                        userAndLike = new UserAndLike { user = myUser, likeState = true }
                     });
-                }               
+                }
             }
-
+            
             Notification.BindingContext = listItem;
         }
 
         private void TextCell_Tapped(object sender, EventArgs e)
         {
             TextCell t = (TextCell)sender;
-            // t.CommandParameter.ToString();
-            User user = (User)t.CommandParameter;
-            Navigation.PushModalAsync(new MatchUp(user));
+            UserAndLike userAndLike = (UserAndLike)t.CommandParameter;
 
+            Navigation.PushModalAsync(new MatchUp(userAndLike));
         }
 
         //public void ListItems(List<NotificationsModel> list)

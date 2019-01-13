@@ -22,20 +22,24 @@ namespace MatchandMeet.MasterDetailPage
     {
         User selectedUser;
         double DEG_PER_RAD = (180.0 / Math.PI);
-        public MatchUp(User user)
+
+        public MatchUp(UserAndLike userAndLike)
         {
             InitializeComponent();
-            GetLocation();
-            selectedUser = user;
 
-            userName.Text = selectedUser.Name + ","+ selectedUser.Age;
-          
+            GetLocation();
+
+            selectedUser = userAndLike.user;
+
+            userName.Text = selectedUser.Name + ", "+ selectedUser.Age;          
             userImage.Source = selectedUser.ImageUrl;
 
-            IFirebaseAuthService authService = DependencyService.Get<IFirebaseAuthService>();
-           
-
-            if(selectedUser.UserID != authService.GetUserId())
+            if (!userAndLike.likeState)
+            {
+                ImageArrow.IsVisible = false;
+                acceptbutton.IsVisible = true;
+            }
+            else
             {
                 ImageArrow.IsVisible = true;
                 acceptbutton.IsVisible = false;
@@ -50,7 +54,7 @@ namespace MatchandMeet.MasterDetailPage
             var position = await locator.GetPositionAsync(timeout: TimeSpan.FromSeconds(10000));
             Location myLocation = new Location(position.Longitude, position.Latitude);
 
-            string[] locs = selectedUser.Location.Split(' ');
+            string[] locs = selectedUser.Location.Split(' ');           
             Location selectedUserLocation = new Location(double.Parse(locs[0]), double.Parse(locs[1])); 
 
             double miles = Location.CalculateDistance(selectedUserLocation, myLocation, DistanceUnits.Miles);
@@ -63,7 +67,7 @@ namespace MatchandMeet.MasterDetailPage
         public void GetDirection(Location myLocation, Location targetLocation)
         {
             //Location sanFrancisco = new Location(39, 099912 - 94.581213);
-            // Location boston = new Location(38.627089, -90.200203);
+            //Location boston = new Location(38.627089, -90.200203);
             //Location boston = new Location(41.015137, 28.979530); // istanbul coordinates
             //Location location = sanFrancisco;
 

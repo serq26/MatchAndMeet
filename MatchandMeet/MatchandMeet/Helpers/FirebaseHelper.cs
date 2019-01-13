@@ -102,13 +102,13 @@ namespace MatchandMeet.Helpers
             }            
         }
 
-        public async Task<bool> SaveLike(string id, Like like)
+        public async Task<bool> SaveLike(Like like)
         {
             try
             {
                 like.senderID = authService.GetUserId();
 
-                await client.Child("likes/" + id).PutAsync<Like>(like);
+                await client.Child("likes/" + like.likeID).PutAsync<Like>(like);
 
                 return true;
             }
