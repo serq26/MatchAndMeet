@@ -13,6 +13,7 @@ using Plugin.Geolocator;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using MatchandMeet.Helpers;
+using MatchandMeet.Services.FirebaseAuth;
 
 namespace MatchandMeet.MasterDetailPage
 {
@@ -29,7 +30,16 @@ namespace MatchandMeet.MasterDetailPage
 
             userName.Text = selectedUser.Name + ","+ selectedUser.Age;
           
-            userImage.Source = selectedUser.ImageUrl;           
+            userImage.Source = selectedUser.ImageUrl;
+
+            IFirebaseAuthService authService = DependencyService.Get<IFirebaseAuthService>();
+           
+
+            if(selectedUser.UserID != authService.GetUserId())
+            {
+                ImageArrow.IsVisible = true;
+                acceptbutton.IsVisible = false;
+            }
         }
 
         public async void GetLocation()

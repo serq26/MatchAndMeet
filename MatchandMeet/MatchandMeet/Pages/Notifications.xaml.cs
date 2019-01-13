@@ -51,7 +51,7 @@ namespace MatchandMeet
             {
                 for (int i = 0; i < acceptedLikes.Count; i++)
                 {
-                    User myUser = await helper.LoadUserRequest(likes[i].receiverID);
+                    User myUser = await helper.LoadUserRequest(acceptedLikes[i].receiverID);
 
                     listItem.Add(new NotificationsModel
                     {
