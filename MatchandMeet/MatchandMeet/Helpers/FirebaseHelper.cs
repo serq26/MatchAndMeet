@@ -141,6 +141,30 @@ namespace MatchandMeet.Helpers
             }
         }
 
+        public async Task<List<Like>> LoadAcceptedLikes()
+        {
+            try
+            {
+                var list = (await client.Child("likes/")
+                            .OnceAsync<Like>())
+                            .Where(item => item.Object.senderID == authService.GetUserId() && item.Object.accepted == true)
+                            .Select(item => new Like
+                            {
+                                likeID = item.Key,
+                                accepted = item.Object.accepted,
+                                receiverID = item.Object.receiverID,
+                                senderID = item.Object.senderID
+                            })
+                            .ToList();
+
+                return list;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public async Task<bool> AcceptLike(User user)
         {
             try

@@ -7,7 +7,7 @@
             <ListView x:Name="Notification" ItemsSource="{Binding .}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding notice}" x:Name="{Binding userId}" Detail="To see profile click here" TextColor="Black" Tapped="TextCell_Tapped" CommandParameter="{Binding user}"/>
+                        <TextCell Text="{Binding notice}" Detail="To see profile click here" TextColor="Black" Tapped="TextCell_Tapped" CommandParameter="{Binding user}"/>
 
 
                     </DataTemplate>
