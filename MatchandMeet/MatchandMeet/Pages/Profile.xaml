@@ -15,7 +15,7 @@
                 </Image.GestureRecognizers>
             </Image>
           
-            <image:CircleImage x:Name="Image" WidthRequest="200" HeightRequest="200" ></image:CircleImage>
+            <image:CircleImage x:Name="Image" WidthRequest="200" HeightRequest="100" ></image:CircleImage>
 
         
           
