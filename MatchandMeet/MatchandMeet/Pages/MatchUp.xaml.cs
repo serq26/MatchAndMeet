@@ -35,44 +35,36 @@ namespace MatchandMeet.MasterDetailPage
         public async void GetLocation()
         {
             var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
-
-      
+            locator.DesiredAccuracy = 50;      
 
             var position = await locator.GetPositionAsync(timeout: TimeSpan.FromSeconds(10000));
-            Location MyLocation = new Location(position.Longitude, position.Latitude);
-
+            Location myLocation = new Location(position.Longitude, position.Latitude);
 
             string[] locs = selectedUser.Location.Split(' ');
             Location selectedUserLocation = new Location(double.Parse(locs[0]), double.Parse(locs[1])); 
 
-            double miles = Location.CalculateDistance(selectedUserLocation, MyLocation, DistanceUnits.Miles);
+            double miles = Location.CalculateDistance(selectedUserLocation, myLocation, DistanceUnits.Miles);
 
+            distance.Text = ((int)miles).ToString() + "m";
 
-            distance.Text =((int)miles).ToString() + "m";
-
-            GetDirection(MyLocation);
-
-
-
+            GetDirection(myLocation, selectedUserLocation);
         }
 
-        public double GetDirection(Location location)
+        public void GetDirection(Location myLocation, Location targetLocation)
         {
-            Location sanFrancisco = new Location(39, 099912 - 94.581213);
+            //Location sanFrancisco = new Location(39, 099912 - 94.581213);
             // Location boston = new Location(38.627089, -90.200203);
-            Location boston = new Location(41.015137, 28.979530); // istanbul coordinates
+            //Location boston = new Location(41.015137, 28.979530); // istanbul coordinates
             //Location location = sanFrancisco;
 
-
-            double Lon = boston.Longitude - location.Longitude;
-            double y = Math.Sin(Lon) * Math.Cos(boston.Latitude);
-            double x = Math.Cos(location.Latitude) * Math.Sin(boston.Latitude) - Math.Sin(location.Latitude) * Math.Cos(boston.Latitude) * Math.Cos(Lon);
+            double Lon = targetLocation.Longitude - myLocation.Longitude;
+            double y = Math.Sin(Lon) * Math.Cos(targetLocation.Latitude);
+            double x = Math.Cos(myLocation.Latitude) * Math.Sin(targetLocation.Latitude) - Math.Sin(myLocation.Latitude) * Math.Cos(targetLocation.Latitude) * Math.Cos(Lon);
             double angle = DEG_PER_RAD * Math.Atan2(y, x);
 
             ImageArrow.Rotation = angle;
 
-            return angle;
+            GetLocation();
         }
 
         private void Button_Clicked(object sender, EventArgs e)

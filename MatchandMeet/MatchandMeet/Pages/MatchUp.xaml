@@ -24,12 +24,13 @@
                 
             </StackLayout>
 
-            <Button x:Name="acceptbutton" Text="Accept" BorderRadius="20" BorderColor="Black" FontSize="20" BackgroundColor="Green" TextColor="White" FontAttributes="Bold" Clicked="Button_Clicked" Margin="0,100,0,0" ></Button>
+            
 
         </StackLayout>
 
-		
-       
-     
-    </StackLayout>
+		<StackLayout Orientation="Vertical">
+			<Button x:Name="acceptbutton" Text="Accept" BorderRadius="20" BorderColor="Black" FontSize="20" BackgroundColor="Green" TextColor="White" FontAttributes="Bold" Clicked="Button_Clicked" Margin="0,300,0,0" ></Button>
+		</StackLayout>
+
+	</StackLayout>
 </ContentPage>
