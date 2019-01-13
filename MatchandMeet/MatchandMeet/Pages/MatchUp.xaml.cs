@@ -12,6 +12,7 @@ using Xamarin.Essentials;
 using Plugin.Geolocator;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
+using MatchandMeet.Helpers;
 
 namespace MatchandMeet.MasterDetailPage
 {
@@ -28,10 +29,8 @@ namespace MatchandMeet.MasterDetailPage
 
             userName.Text = selectedUser.Name;
             userAge.Text = selectedUser.Age;
-            userImage.Source = selectedUser.ImageUrl;
-           
+            userImage.Source = selectedUser.ImageUrl;           
         }
-
         
         public async void GetLocation()
         {
@@ -49,15 +48,24 @@ namespace MatchandMeet.MasterDetailPage
 
             double miles = Location.CalculateDistance(boston, MyLocation, DistanceUnits.Miles);
 
-            DistanceLabel.Text = miles.ToString();
-            
+            DistanceLabel.Text = miles.ToString();            
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            ImageArrow.IsVisible = true;
-            acceptbutton.IsVisible = false;
+            AcceptLike();
         }
+
+        public async void AcceptLike()
+        {
+            var helper = new FirebaseHelper();
+
+            if (await helper.AcceptLike(selectedUser))
+            {
+                ImageArrow.IsVisible = true;
+                acceptbutton.IsVisible = false;
+            }
+        }        
 
         //public async void OnButtonClicked(object sender, EventArgs e)
         //{

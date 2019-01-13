@@ -126,6 +126,7 @@ namespace MatchandMeet.Helpers
                             .OnceAsync<Like>())
                             .Where(item => item.Object.receiverID == authService.GetUserId() && item.Object.accepted == false)
                             .Select(item => new Like {
+                                likeID = item.Key,
                                 accepted = item.Object.accepted,
                                 receiverID = item.Object.receiverID,
                                 senderID = item.Object.senderID
@@ -139,5 +140,46 @@ namespace MatchandMeet.Helpers
                 return null;
             }
         }
+
+        public async Task<bool> AcceptLike(User user)
+        {
+            try
+            {
+                Like acceptedLike = new Like();
+                string myUserID = authService.GetUserId();
+
+                List<Like> likes = await LoadLikes();
+
+                if (likes != null)
+                {
+                    for (int i = 0; i < likes.Count; i++)
+                    {
+                        if (likes[i].senderID == user.UserID)
+                        {
+                            acceptedLike = likes[i];
+                            break;
+                        }
+                    }
+
+                    acceptedLike.accepted = true;
+
+                    await client.Child("likes/" + acceptedLike.likeID).PatchAsync<Like>(acceptedLike);
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+
+
+        
     }
 }

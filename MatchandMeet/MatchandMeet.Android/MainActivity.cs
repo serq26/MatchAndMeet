@@ -42,6 +42,9 @@ namespace MatchandMeet.Droid
             .SetApplicationId("1:612011807928:android:c975122305aafc5f")
             .SetApiKey("AIzaSyBmDcNh9MwHtKX0mMM6QkWT6_PjeYEoEtg")
             .SetDatabaseUrl("https://bim493project.firebaseio.com/")
+            //.SetApplicationId("1:115096532451:android:f8e4b7a510165d52")
+            //.SetApiKey("AIzaSyBc8yaTHpT_XT5XZqwA3-ZoQpWrqrsCg9U")
+            //.SetDatabaseUrl("https://matchandmeet-f2943.firebaseio.com")
             .Build();
 
 

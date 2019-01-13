@@ -34,17 +34,12 @@ namespace MatchandMeet
                 MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
                 {
                     new MasterDetailPage1MenuItem { Id = 0, Title = "Profile", TargetType=typeof(Profile) },
-                    new MasterDetailPage1MenuItem { Id = 1, Title = "Notifications", TargetType=typeof(Notifications) },
-                    new MasterDetailPage1MenuItem { Id = 2, Title = "Settings" , TargetType=typeof(MyCompass)},
-                    new MasterDetailPage1MenuItem { Id = 3, Title = "Feedback" },
-                    new MasterDetailPage1MenuItem { Id = 4, Title = "Quit" },
+                    new MasterDetailPage1MenuItem { Id = 1, Title = "Notifications", TargetType=typeof(Notifications) }
+                    //new MasterDetailPage1MenuItem { Id = 2, Title = "Settings" , TargetType=typeof(MyCompass)},
+                    //new MasterDetailPage1MenuItem { Id = 3, Title = "Feedback" }
+                    //new MasterDetailPage1MenuItem { Id = 4, Title = "Quit" },
                 });
-
-                
             }
-            
-            
-        
 
             #region INotifyPropertyChanged Implementation
             public event PropertyChangedEventHandler PropertyChanged;

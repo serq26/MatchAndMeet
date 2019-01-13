@@ -51,34 +51,7 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                    
-                    <ImageButton BackgroundColor="Transparent"
-                    WidthRequest="100"
-                    HeightRequest="70"
-                    Margin="0,0,0,-63"
-                    FlexLayout.AlignSelf="Start"
-                    Aspect="AspectFit"            
-                    FlexLayout.Grow="0"
-                    Clicked="ImageButton1_Clicked"
-                    Source="cancel.png">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                                <VisualState x:Name="Pressed">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="0.8"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </ImageButton>
-                    
+                                                            
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
@@ -109,7 +82,7 @@
             </Frame>
 
             <Frame WidthRequest="350"
-                   HeightRequest="600" x:Name="deneme1">
+                   HeightRequest="600" x:Name="Frame2">
                     
                 <FlexLayout Direction="Column">
                     
@@ -122,41 +95,14 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                    <!--<Button />-->
-                    <ImageButton BackgroundColor="Transparent"
-                    WidthRequest="100"
-                    HeightRequest="70"
-                     Margin="0,0,0,-63"
-                    FlexLayout.AlignSelf="Start"
-                     Aspect="AspectFit"            
-                    FlexLayout.Grow="0"
-                     Clicked="ImageButton1_Clicked"
-                     Source="cancel.png">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                                <VisualState x:Name="Pressed">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="0.8"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </ImageButton>
-
+                    
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"
                      Aspect="AspectFit"            
                     FlexLayout.Grow="0"
-                     Clicked="ImageButton_Clicked"
+                     Clicked="ImageButton1_Clicked"
                      Source="heart.png">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -179,7 +125,7 @@
             </Frame>
 
             <Frame WidthRequest="350"
-                   HeightRequest="600">
+                   HeightRequest="600" x:Name="Frame3">
 
                 <FlexLayout Direction="Column">
                     <Label Text="" x:Name="UserName3" FontSize="30"
@@ -190,42 +136,14 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                    <!--<Button />-->
-                    <ImageButton BackgroundColor="Transparent"
-                    WidthRequest="100"
-                    HeightRequest="70"
-                     Margin="0,0,0,-63"
-                    FlexLayout.AlignSelf="Start"
-                     Aspect="AspectFit"            
-                    FlexLayout.Grow="0"
-                     Clicked="ImageButton1_Clicked"
-                           
-                     Source="cancel.png">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                                <VisualState x:Name="Pressed">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="0.8"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </ImageButton>
-
+                    
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"
                      Aspect="AspectFit"            
                     FlexLayout.Grow="0"
-                     Clicked="ImageButton_Clicked"
+                     Clicked="ImageButton2_Clicked"
                      Source="heart.png">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -248,7 +166,7 @@
             </Frame>
             
             <Frame WidthRequest="350"
-                   HeightRequest="600">
+                   HeightRequest="600" x:Name="Frame4">
 
                 <FlexLayout Direction="Column">
                     <Label Text="" x:Name="UserName4" FontSize="30"
@@ -259,42 +177,14 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                    <!--<Button />-->
-                    <ImageButton BackgroundColor="Transparent"
-                    WidthRequest="100"
-                    HeightRequest="70"
-                     Margin="0,0,0,-63"
-                    FlexLayout.AlignSelf="Start"
-                     Aspect="AspectFit"            
-                    FlexLayout.Grow="0"
-                     Clicked="ImageButton1_Clicked"
-                           
-                     Source="cancel.png">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                                <VisualState x:Name="Pressed">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="0.8"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </ImageButton>
-
+                    
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"
                      Aspect="AspectFit"            
                     FlexLayout.Grow="0"
-                     Clicked="ImageButton_Clicked"
+                     Clicked="ImageButton3_Clicked"
                      Source="heart.png">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -317,7 +207,7 @@
             </Frame>
 
             <Frame WidthRequest="350"
-                   HeightRequest="600">
+                   HeightRequest="600" x:Name="Frame5" >
 
                 <FlexLayout Direction="Column">
                     <Label Text="" x:Name="UserName5" FontSize="30"
@@ -328,42 +218,14 @@
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
                     <Label FlexLayout.Grow="1" />
-                    <!--<Button />-->
-                    <ImageButton BackgroundColor="Transparent"
-                    WidthRequest="100"
-                    HeightRequest="70"
-                     Margin="0,0,0,-63"
-                    FlexLayout.AlignSelf="Start"
-                     Aspect="AspectFit"            
-                    FlexLayout.Grow="0"
-                     Clicked="ImageButton1_Clicked"
-                           
-                     Source="cancel.png">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                                <VisualState x:Name="Pressed">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="0.8"/>
-                                    </VisualState.Setters>
-                                </VisualState>
-
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </ImageButton>
-
+                   
                     <ImageButton BackgroundColor="Transparent"
                     WidthRequest="100"
                     HeightRequest="70"
                     FlexLayout.AlignSelf="End"
                      Aspect="AspectFit"            
                     FlexLayout.Grow="0"
-                     Clicked="ImageButton_Clicked"
+                     Clicked="ImageButton4_Clicked"
                      Source="heart.png">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -385,7 +247,212 @@
                 </FlexLayout>
             </Frame>
 
-        </FlexLayout>
+			<Frame WidthRequest="350"
+                   HeightRequest="600" x:Name="Frame6">
+
+				<FlexLayout Direction="Column">
+					<Label Text="" x:Name="UserName6" FontSize="30"
+                           Style="{StaticResource headerLabel}" />
+					<Image x:Name="UserImage6"
+                           WidthRequest="400"
+                           HeightRequest="390" 
+                           Margin="0,-20,0,0"
+                           Aspect="AspectFill"/>
+					<Label FlexLayout.Grow="1" />
+
+					<ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    FlexLayout.AlignSelf="End"
+                     Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                     Clicked="ImageButton5_Clicked"
+                     Source="heart.png">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="1"/>
+									</VisualState.Setters>
+								</VisualState>
+
+								<VisualState x:Name="Pressed">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="0.8"/>
+									</VisualState.Setters>
+								</VisualState>
+
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+					</ImageButton>
+				</FlexLayout>
+			</Frame>
+
+			<Frame WidthRequest="350"
+                   HeightRequest="600" x:Name="Frame7">
+
+				<FlexLayout Direction="Column">
+					<Label Text="" x:Name="UserName7" FontSize="30"
+                           Style="{StaticResource headerLabel}" />
+					<Image x:Name="UserImage7"
+                           WidthRequest="400"
+                           HeightRequest="390" 
+                           Margin="0,-20,0,0"
+                           Aspect="AspectFill"/>
+					<Label FlexLayout.Grow="1" />
+
+					<ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    FlexLayout.AlignSelf="End"
+                     Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                     Clicked="ImageButton6_Clicked"
+                     Source="heart.png">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="1"/>
+									</VisualState.Setters>
+								</VisualState>
+
+								<VisualState x:Name="Pressed">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="0.8"/>
+									</VisualState.Setters>
+								</VisualState>
+
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+					</ImageButton>
+				</FlexLayout>
+			</Frame>
+
+			<Frame WidthRequest="350"
+                   HeightRequest="600" x:Name="Frame8">
+
+				<FlexLayout Direction="Column">
+					<Label Text="" x:Name="UserName8" FontSize="30"
+                           Style="{StaticResource headerLabel}" />
+					<Image x:Name="UserImage8"
+                           WidthRequest="400"
+                           HeightRequest="390" 
+                           Margin="0,-20,0,0"
+                           Aspect="AspectFill"/>
+					<Label FlexLayout.Grow="1" />
+
+					<ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    FlexLayout.AlignSelf="End"
+                     Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                     Clicked="ImageButton7_Clicked"
+                     Source="heart.png">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="1"/>
+									</VisualState.Setters>
+								</VisualState>
+
+								<VisualState x:Name="Pressed">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="0.8"/>
+									</VisualState.Setters>
+								</VisualState>
+
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+					</ImageButton>
+				</FlexLayout>
+			</Frame>
+
+			<Frame WidthRequest="350"
+                   HeightRequest="600" x:Name="Frame9">
+
+				<FlexLayout Direction="Column">
+					<Label Text="" x:Name="UserName9" FontSize="30"
+                           Style="{StaticResource headerLabel}" />
+					<Image x:Name="UserImage9"
+                           WidthRequest="400"
+                           HeightRequest="390" 
+                           Margin="0,-20,0,0"
+                           Aspect="AspectFill"/>
+					<Label FlexLayout.Grow="1" />
+
+					<ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    FlexLayout.AlignSelf="End"
+                     Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                     Clicked="ImageButton8_Clicked"
+                     Source="heart.png">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="1"/>
+									</VisualState.Setters>
+								</VisualState>
+
+								<VisualState x:Name="Pressed">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="0.8"/>
+									</VisualState.Setters>
+								</VisualState>
+
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+					</ImageButton>
+				</FlexLayout>
+			</Frame>
+
+			<Frame WidthRequest="350"
+                   HeightRequest="600" x:Name="Frame10">
+
+				<FlexLayout Direction="Column">
+					<Label Text="" x:Name="UserName10" FontSize="30"
+                           Style="{StaticResource headerLabel}" />
+					<Image x:Name="UserImage10"
+                           WidthRequest="400"
+                           HeightRequest="390" 
+                           Margin="0,-20,0,0"
+                           Aspect="AspectFill"/>
+					<Label FlexLayout.Grow="1" />
+
+					<ImageButton BackgroundColor="Transparent"
+                    WidthRequest="100"
+                    HeightRequest="70"
+                    FlexLayout.AlignSelf="End"
+                     Aspect="AspectFit"            
+                    FlexLayout.Grow="0"
+                     Clicked="ImageButton9_Clicked"
+                     Source="heart.png">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="1"/>
+									</VisualState.Setters>
+								</VisualState>
+
+								<VisualState x:Name="Pressed">
+									<VisualState.Setters>
+										<Setter Property="Scale" Value="0.8"/>
+									</VisualState.Setters>
+								</VisualState>
+
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+					</ImageButton>
+				</FlexLayout>
+			</Frame>
+
+		</FlexLayout>
 
     </ScrollView>
 

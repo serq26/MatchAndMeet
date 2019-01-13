@@ -39,10 +39,8 @@
 
         </StackLayout>
 
-
-        <Button x:Name="acceptbutton" Text="Accept" FontSize="20" TextColor="Blue" Clicked="Button_Clicked" ></Button>
+		<Button x:Name="acceptbutton" Text="Accept" FontSize="20" TextColor="Blue" Clicked="Button_Clicked" ></Button>
         <!--<Button Text="Get GPS location" Clicked="OnButtonClicked" FontSize="20" />-->
-        
      
     </StackLayout>
 </ContentPage>
