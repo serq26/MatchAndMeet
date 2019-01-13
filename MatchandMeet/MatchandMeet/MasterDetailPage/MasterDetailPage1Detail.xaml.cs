@@ -71,17 +71,17 @@ namespace MatchandMeet
                     UserName6.Text = loadedUsers[5].Name + ", " + loadedUsers[5].Age;
                     UserImage6.Source = loadedUsers[5].ImageUrl;
 
-                    UserName7.Text = loadedUsers[6].Name + ", " + loadedUsers[6].Age;
-                    UserImage7.Source = loadedUsers[6].ImageUrl;
+                    //UserName7.Text = loadedUsers[6].Name + ", " + loadedUsers[6].Age;
+                    //UserImage7.Source = loadedUsers[6].ImageUrl;
 
-                    UserName8.Text = loadedUsers[7].Name + ", " + loadedUsers[7].Age;
-                    UserImage8.Source = loadedUsers[7].ImageUrl;
+                    //UserName8.Text = loadedUsers[7].Name + ", " + loadedUsers[7].Age;
+                    //UserImage8.Source = loadedUsers[7].ImageUrl;
 
-                    UserName9.Text = loadedUsers[8].Name + ", " + loadedUsers[8].Age;
-                    UserImage9.Source = loadedUsers[8].ImageUrl;
+                    //UserName9.Text = loadedUsers[8].Name + ", " + loadedUsers[8].Age;
+                    //UserImage9.Source = loadedUsers[8].ImageUrl;
 
-                    UserName10.Text = loadedUsers[9].Name + ", " + loadedUsers[9].Age;
-                    UserImage10.Source = loadedUsers[9].ImageUrl;
+                    //UserName10.Text = loadedUsers[9].Name + ", " + loadedUsers[9].Age;
+                    //UserImage10.Source = loadedUsers[9].ImageUrl;
                 }
                 catch (Exception)
                 {
@@ -174,61 +174,61 @@ namespace MatchandMeet
             }
         }
 
-        async private void ImageButton6_Clicked(object sender, EventArgs e)
-        {
-            string id = await _firebaseDBService.CreateLike();
+        //async private void ImageButton6_Clicked(object sender, EventArgs e)
+        //{
+        //    string id = await _firebaseDBService.CreateLike();
 
-            if (id != null)
-            {
-                var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[6].UserID }))
-                {
-                    Frame7.IsVisible = false;
-                }
-            }
-        }
+        //    if (id != null)
+        //    {
+        //        var helper = new FirebaseHelper();
+        //        if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[6].UserID }))
+        //        {
+        //            Frame7.IsVisible = false;
+        //        }
+        //    }
+        //}
 
-        async private void ImageButton7_Clicked(object sender, EventArgs e)
-        {
-            string id = await _firebaseDBService.CreateLike();
+        //async private void ImageButton7_Clicked(object sender, EventArgs e)
+        //{
+        //    string id = await _firebaseDBService.CreateLike();
 
-            if (id != null)
-            {
-                var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[7].UserID }))
-                {
-                    Frame8.IsVisible = false;
-                }
-            }
-        }
+        //    if (id != null)
+        //    {
+        //        var helper = new FirebaseHelper();
+        //        if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[7].UserID }))
+        //        {
+        //            Frame8.IsVisible = false;
+        //        }
+        //    }
+        //}
 
-        async private void ImageButton8_Clicked(object sender, EventArgs e)
-        {
-            string id = await _firebaseDBService.CreateLike();
+        //async private void ImageButton8_Clicked(object sender, EventArgs e)
+        //{
+        //    string id = await _firebaseDBService.CreateLike();
 
-            if (id != null)
-            {
-                var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[8].UserID }))
-                {
-                    Frame9.IsVisible = false;
-                }
-            }
-        }
+        //    if (id != null)
+        //    {
+        //        var helper = new FirebaseHelper();
+        //        if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[8].UserID }))
+        //        {
+        //            Frame9.IsVisible = false;
+        //        }
+        //    }
+        //}
 
-        async private void ImageButton9_Clicked(object sender, EventArgs e)
-        {
-            string id = await _firebaseDBService.CreateLike();
+        //async private void ImageButton9_Clicked(object sender, EventArgs e)
+        //{
+        //    string id = await _firebaseDBService.CreateLike();
 
-            if (id != null)
-            {
-                var helper = new FirebaseHelper();
-                if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[9].UserID }))
-                {
-                    Frame10.IsVisible = false;
-                }
-            }
-        }
+        //    if (id != null)
+        //    {
+        //        var helper = new FirebaseHelper();
+        //        if (await helper.SaveLike(id, new Like { receiverID = loadedUsers[9].UserID }))
+        //        {
+        //            Frame10.IsVisible = false;
+        //        }
+        //    }
+        //}
         private void Cancel_Clicked(object sender, EventArgs e)
         {
             Frame1.IsVisible = false;
@@ -254,22 +254,22 @@ namespace MatchandMeet
         {
             Frame6.IsVisible = false;
         }
-        private void Cancel6_Clicked(object sender, EventArgs e)
-        {
-            Frame7.IsVisible = false;
-        }
-        private void Cancel7_Clicked(object sender, EventArgs e)
-        {
-            Frame8.IsVisible = false;
-        }
-        private void Cancel8_Clicked(object sender, EventArgs e)
-        {
-            Frame9.IsVisible = false;
-        }
-        private void Cancel9_Clicked(object sender, EventArgs e)
-        {
-            Frame10.IsVisible = false;
-        }
+        //private void Cancel6_Clicked(object sender, EventArgs e)
+        //{
+        //    Frame7.IsVisible = false;
+        //}
+        //private void Cancel7_Clicked(object sender, EventArgs e)
+        //{
+        //    Frame8.IsVisible = false;
+        //}
+        //private void Cancel8_Clicked(object sender, EventArgs e)
+        //{
+        //    Frame9.IsVisible = false;
+        //}
+        //private void Cancel9_Clicked(object sender, EventArgs e)
+        //{
+        //    Frame10.IsVisible = false;
+        //}
 
     }
 }

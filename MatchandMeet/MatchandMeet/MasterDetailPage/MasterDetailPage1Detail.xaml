@@ -38,15 +38,15 @@
 
     <ScrollView Orientation="Both">
         <FlexLayout>
-            <Frame x:Name="Frame1" IsVisible="True" WidthRequest="250"
-                   HeightRequest="500">
+            <Frame x:Name="Frame1" IsVisible="True" WidthRequest="300"
+                   HeightRequest="530">
 
                 <FlexLayout Direction="Column">
                     <Label Text="" FontSize="30" x:Name="UserName"
                            Style="{StaticResource headerLabel}" HorizontalOptions="Start" />
 
                     <Image x:Name="UserImage"
-                           HeightRequest="400"
+                           HeightRequest="350"
                             WidthRequest="390"
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
@@ -109,8 +109,8 @@
                 </FlexLayout>
             </Frame>
 
-            <Frame WidthRequest="350"
-                   HeightRequest="600" x:Name="Frame2">
+            <Frame WidthRequest="300"
+                   HeightRequest="530" x:Name="Frame2">
                     
                 <FlexLayout Direction="Column">
                     
@@ -118,7 +118,7 @@
                            Style="{StaticResource headerLabel}" />
              
                     <Image x:Name="UserImage2"
-                           WidthRequest="400"
+                           WidthRequest="350"
                            HeightRequest="390" 
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
@@ -180,14 +180,14 @@
                 </FlexLayout>
             </Frame>
 
-            <Frame WidthRequest="350"
-                   HeightRequest="600" x:Name="Frame3">
+            <Frame WidthRequest="300"
+                   HeightRequest="530" x:Name="Frame3">
 
                 <FlexLayout Direction="Column">
                     <Label Text="" x:Name="UserName3" FontSize="30"
                            Style="{StaticResource headerLabel}" />
                     <Image x:Name="UserImage3"
-                           WidthRequest="400"
+                           WidthRequest="350"
                            HeightRequest="390" 
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
@@ -249,14 +249,14 @@
                 </FlexLayout>
             </Frame>
             
-            <Frame WidthRequest="350"
-                   HeightRequest="600" x:Name="Frame4">
+            <Frame WidthRequest="300"
+                   HeightRequest="530" x:Name="Frame4">
 
                 <FlexLayout Direction="Column">
                     <Label Text="" x:Name="UserName4" FontSize="30"
                            Style="{StaticResource headerLabel}" />
                     <Image x:Name="UserImage4"
-                           WidthRequest="400"
+                           WidthRequest="350"
                            HeightRequest="390" 
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
@@ -318,14 +318,14 @@
                 </FlexLayout>
             </Frame>
 
-            <Frame WidthRequest="350"
-                   HeightRequest="600" x:Name="Frame5" >
+            <Frame WidthRequest="300"
+                   HeightRequest="530" x:Name="Frame5" >
 
                 <FlexLayout Direction="Column">
                     <Label Text="" x:Name="UserName5" FontSize="30"
                            Style="{StaticResource headerLabel}" />
                     <Image x:Name="UserImage5"
-                           WidthRequest="400"
+                           WidthRequest="350"
                            HeightRequest="390" 
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
@@ -387,14 +387,14 @@
                 </FlexLayout>
             </Frame>
 
-			<Frame WidthRequest="350"
-                   HeightRequest="600" x:Name="Frame6">
+			<Frame WidthRequest="300"
+                   HeightRequest="530" x:Name="Frame6">
 
 				<FlexLayout Direction="Column">
 					<Label Text="" x:Name="UserName6" FontSize="30"
                            Style="{StaticResource headerLabel}" />
 					<Image x:Name="UserImage6"
-                           WidthRequest="400"
+                           WidthRequest="350"
                            HeightRequest="390" 
                            Margin="0,-20,0,0"
                            Aspect="AspectFill"/>
@@ -456,7 +456,7 @@
 				</FlexLayout>
 			</Frame>
 
-			<Frame WidthRequest="350"
+			<!--<Frame WidthRequest="350"
                    HeightRequest="600" x:Name="Frame7">
 
 				<FlexLayout Direction="Column">
@@ -730,7 +730,7 @@
 						</VisualStateManager.VisualStateGroups>
 					</ImageButton>
 				</FlexLayout>
-			</Frame>
+			</Frame>-->
 
 		</FlexLayout>
 
