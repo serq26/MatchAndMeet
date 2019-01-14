@@ -24,8 +24,6 @@ namespace MatchandMeet.Helpers
         {
             client = new FirebaseClient("https://bim493project.firebaseio.com/");
             storage = new FirebaseStorage("bim493project.appspot.com");
-            //client = new FirebaseClient("https://matchandmeet-f2943.firebaseio.com");
-            //storage = new FirebaseStorage("matchandmeet-f2943.appspot.com");
 
             authService = DependencyService.Get<IFirebaseAuthService>();
         }

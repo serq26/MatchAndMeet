@@ -74,12 +74,12 @@ namespace MatchandMeet
             await fire.SaveUserRequest(imgStr, new User { Name = txt , Age = age, City = city, Gender = gender });
 
             var answer = await DisplayAlert("Match&Meet", "You have been registered!", "OK","Cancel");
-            if(answer)
+
+            if (answer)
             {
                 await Navigation.PushAsync(new MasterDetailPage1Detail());
                 Navigation.RemovePage(this);
-            }
-           
+            }           
         }
 
         void OnPickerSelectedIndexChanged(object sender, EventArgs e)

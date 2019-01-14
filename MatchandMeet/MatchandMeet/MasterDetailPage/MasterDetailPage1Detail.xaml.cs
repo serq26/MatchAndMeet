@@ -34,20 +34,34 @@ namespace MatchandMeet
 
         async void GetLocation()
         {
-            var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
+            try
+            {
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 50;
 
-            var position = await locator.GetPositionAsync(timeout: TimeSpan.FromSeconds(10000));
-            string location = position.Longitude.ToString() + " " + position.Latitude.ToString();
+                var position = await locator.GetPositionAsync(timeout: TimeSpan.FromSeconds(10000));
+                string location = position.Longitude.ToString() + " " + position.Latitude.ToString();
 
-            var fire = new FirebaseHelper();
-            await fire.SaveUserLocation(location);
+                var fire = new FirebaseHelper();
+                await fire.SaveUserLocation(location);
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         async void LoadAllUserInfo()
         {
-            var fire = new FirebaseHelper();
-            loadedUsers = await fire.LoadAllUserRequest();
+            try
+            {
+                var fire = new FirebaseHelper();
+                loadedUsers = await fire.LoadAllUserRequest();
+            }
+            catch (Exception)
+            {
+
+            }
 
             if (loadedUsers != null)
             {
